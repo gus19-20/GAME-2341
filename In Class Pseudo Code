@@ -1,0 +1,77 @@
+#Pseudo Code practice 1
+Initialize string userInput
+prompt user to input
+check if userInput consists of letters only
+      if it doesnt then tell the user than they need to redo their input, then prompt them to input again
+      else then program continues
+check if userInput is already all caps
+      if not then we will use .toUpper() to change the letters to their uppercase counterpart
+      elsee then nothing happens
+return userInput
+-----------------------------------------------------------
+#Pseudo Code Practice 2
+init int number1
+init int number2
+init int result
+
+try
+prompt user to set number1 to an integer
+catch if user does not input an integer then have them redo it
+
+try
+prompt user to set number2 to an integer
+catch if user does not input an integer then have them redo it
+
+set result equal to the sum of number1 and number2
+
+return sum
+-----------------------------------------------------------
+#Pseudo Code Practice 3
+
+init int userInput
+init int sum = 0
+
+while true
+      try prompting user to set userInput to an integer
+      catch if user does not input an integer and make them redo it
+      add the value of userInput to sum
+      ask user if they would like to add another numberr
+              if yes then the loop begins again
+              if not then break the loop
+
+return sum
+-----------------------------------------------------------
+#Pseudo Code Practice 4
+
+init int min = 0
+init int max
+init int output
+init string input
+
+while true
+      try to prompt the user to set max to a valid integer
+      catch if they do not input an integer and have them redo it
+
+      set output to a random value using rand(0, 100)
+
+      print output
+
+      ask user if they would like to generate a new number
+              if yes then the loop will start again
+              else if no then break the loop
+              else then the input is invalid and they will have to redo their input
+-----------------------------------------------------------
+#Pseudo Code Practice 5
+
+init int randNum
+init int leftCount
+init int rightCount
+init int total
+while total > 11
+    set randNum equal to a random number between 1 to 100 inclusively by using rand(1,100)
+      if randNum when divided by 2 does not have any remainder, increase rightCount by 1
+      else increase leftCount by 1
+    increase total by 1
+
+when loop ends print "Left : {leftCount}\tRight : {rightCount}"
+
