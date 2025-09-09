@@ -1,0 +1,32 @@
+init int randNum
+init int userNum
+init int attempts equals 0
+
+while True
+	attempts is set to equal 0
+	computer sets randNum to a random number value between 1-100 inclusively
+	print("I just picked a number from 1-100! Can you guess which one? I'll let you have 7 attempts to guess")
+	
+	while attempts is less than or equal to 7
+		user inputs the number they guess
+		userNum = user's Input
+		if userNum is equal to randNum:
+			then print("You guessed correctly!")
+		else
+			then print ("Wrong!")
+			increase attempts by 1
+		
+	if attempts is equal to 8
+		print("You lost! The correct answer was " + randNum)
+
+	print("If you would like to play again, press 1, if not then press 0 to end the program")
+	
+	
+	user inputs their desired number and that value is stored to userNum
+	while userNum is greater than 1
+		then print("Invalid input, please try again")
+		receive number input from user and set userNum equal to that number
+
+	if userNum is equal to 0
+		print("Thanks for playing!")
+		break out of the while loop
