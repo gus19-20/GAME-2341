@@ -1,0 +1,81 @@
+--1
+print("Enter any series of letters: ")
+words = io.read()
+words = string.upper(words)
+
+print(words)
+--]]
+--2
+print("Please enter the first number: ")
+numOne = tonumber(io.read())
+
+while numOne == nil do
+  print("Not a number try again: ")
+  numOne = tonumber(io.read())
+end
+
+print("Please enter the second number: ")
+numTwo = tonumber(io.read())
+
+while numTwo == nil do
+  print("Not a number try again: ")
+  numTwo = tonumber(io.read())
+end
+
+total = numOne + numTwo
+
+print(total)
+--]]
+--3
+number = 0
+input1 = 0
+control = true
+while control == true do
+  print("Enter a number: ")
+  input1 = io.read()
+  if input1 == "-1" then
+    break
+  end
+  number = number + input1
+end
+print(number)
+--]]
+--4
+math.randomseed(os.time())
+control = true
+while control == true do
+  print("Define max number: ")
+  maxNum = io.read()
+  maxNum = tonumber(maxNum)
+  while type(maxNum) ~= "number" do
+    print("Not a number, try again: ")
+    maxNum = io.read()
+    maxNum = tonumber(maxNum)
+  end
+
+  rand = math.random(0, maxNum)
+  print(rand)
+  print("Do you want to continue? (y/n)")
+  input = io.read()
+  if input == "n" then
+    control = false
+  end
+end
+--]]
+--5
+math.randomseed(os.time())
+leftCount = 0
+rightCount = 0
+
+for i = 1, 10 do
+  randNum = math.random(1, 100)
+  if randNum % 2 == 0 then
+    rightCount = rightCount + 1
+  else
+    leftCount = leftCount + 1
+  end
+end
+
+print("left count: ", leftCount)
+print("right count: ", rightCount)
+--]]
