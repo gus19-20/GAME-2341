@@ -1,0 +1,40 @@
+continue = true
+while continue == true do
+  correct = false
+  charIsYN = false
+  userChar = "a"
+  attempts = 0
+  math.randomseed(os.time())
+  randNum = math.random(0, 100)
+  while attempts <= 7 and correct == false do
+    print("I'm thinking of a random number, can you guess what it is?")
+    userNum = tonumber(io.read())
+    if userNum == randNum then
+      print("You guessed correctly!")
+      correct = true
+    else
+      print("Wrong! try again")
+      attempts = attempts + 1
+    end
+  end
+
+  if correct then
+    print("You won!")
+  elseif not correct then
+    print("You lost!")
+  end
+
+  print("Would you like to try again? (Enter 'y' or 'n'")
+  while charIsYN == false do
+    userChar = io.read()
+    if userChar == "n" then
+      print("Thanks for playing!")
+      continue = false
+      charIsYN = true
+    elseif userChar == "y" then
+      charIsYN = true
+    else
+      print("Invalid input, try again")
+    end
+  end
+end
